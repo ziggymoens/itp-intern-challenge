@@ -90,6 +90,7 @@ export default function Home({ data }) {
           <h1 class="display-4">{data.index.title}</h1>
           <p class="lead">{data.index.subtitle}</p>
         </div>
+
         <div class="row">
           {data.allRecipes.map(recipe => (
             <div class="col-lg-4 col-md-6 col-sm-12">
@@ -101,7 +102,7 @@ export default function Home({ data }) {
                     Made by: {recipe.chef.name}
                   </p>
                   <Link as={`/${recipe.slug}`} href={"/[recipe]"}>
-                    <a class="btn btn-primary">
+                    <a class="btn btn-primary w-100">
                       More info...
                     </a>
                   </Link>

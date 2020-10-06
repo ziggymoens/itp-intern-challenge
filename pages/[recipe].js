@@ -109,15 +109,19 @@ export default function Home({ data, params }) {
             <div class="container">
                 <div class="row">
                     <div class="col-lg-9 col-md-8 col-sm-10">
-                        <h4>ingredients</h4>
-                        {reci.ingredients.map(ingredient => (
-                            <p>{ingredient.amount} {ingredient.quantity} {ingredient.name}</p>
-                        ))}
+                        <h3>Ingredients</h3>
+                        <ul>
+                            {reci.ingredients.map(ingredient => (
+                                <li>
+                                    <p>{ingredient.amount} {ingredient.quantity} {ingredient.name}</p>
+                                </li>
+                            ))}
+                        </ul>
                         <br></br>
-                        <h4>Instructions</h4>
+                        <h3>Instructions</h3>
                         {reci.instructions.map(instruction => (
                             <div>
-                                <h5>{instruction.step}</h5>
+                                <h4>Step: {instruction.step}</h4>
                                 <p>{instruction.instructiontext}</p>
                             </div>
                         ))}
