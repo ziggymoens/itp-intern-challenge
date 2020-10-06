@@ -106,7 +106,7 @@ export default function Home({ data}) {
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-9 col-md-8 col-sm-10">
+                    <div class="col-lg-8 col-md-7 col-sm-10">
                         <h3>Ingredients</h3>
                         <ul>
                             {reci.ingredients.map(ingredient => (
@@ -124,7 +124,7 @@ export default function Home({ data}) {
                             </div>
                         ))}
                     </div>
-                    <div class="col-lg-3 col-md-4 col-sm-2">
+                    <div class="col-lg-4 col-md-5 col-sm-3">
                         <h3>{reci.chef.name}</h3>
                         <img class="w-75" src={reci.chef.picture.responsiveImage.src} />
                     </div>
