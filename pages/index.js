@@ -103,7 +103,7 @@ export default function Home({ data }) {
                   </p>
                   <Link as={`/${recipe.slug}`} href={"/[recipe]"}>
                     <a class="btn btn-dark w-100">
-                      More info...
+                      More info
                     </a>
                   </Link>
                 </div>
