@@ -94,7 +94,7 @@ export default function Home({ data }) {
         <div class="row">
           {data.allRecipes.map(recipe => (
             <div class="col-lg-4 col-md-6 col-sm-12">
-              <div class="card">
+              <div class="card mt-3">
                 <img src={recipe.picture.responsiveImage.src} class="card-img-top" alt="..." />
                 <div class="card-body">
                   <h5 class="card-title">{recipe.title}</h5>
