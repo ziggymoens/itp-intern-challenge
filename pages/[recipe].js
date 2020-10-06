@@ -57,7 +57,7 @@ query Recipe ($limit: IntType){
 export async function getStaticPaths() {
     const data = await request({
         query: RECIPE_QUERY,
-        variables: { limit: 3 }
+        variables: { limit: 4 }
     })
 
     const paths = data.allRecipes.map(r => ({
