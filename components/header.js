@@ -19,7 +19,12 @@ export default function Header() {
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <Link href="/">
-                            <a class="nav-link">Home <span class="sr-only"></span></a>
+                            <a class="nav-link">Home</a>
+                        </Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link as={`/mystery`} href={"/[recipe]"}>
+                            <a class="nav-link">Mystery recipe</a>
                         </Link>
                     </li>
                 </ul>

@@ -10,7 +10,7 @@ query Recipe ($limit: IntType){
       chef {
         name
         picture {
-          responsiveImage(imgixParams: {fit: crop, w: "300", h: "300", auto: format}) {
+          responsiveImage(imgixParams: {fit: fill, w: "300", h: "300", auto: format}) {
             srcSet
             webpSrcSet
             sizes
@@ -32,7 +32,7 @@ query Recipe ($limit: IntType){
         amount
       }
       picture {
-        responsiveImage(imgixParams: {auto: format, fit: crop, h: "300", w: "300"}) {
+        responsiveImage(imgixParams: {auto: format, fit: fill, h: "300", w: "300"}) {
           srcSet
           webpSrcSet
           sizes
@@ -47,7 +47,7 @@ query Recipe ($limit: IntType){
       }
       instructions{
         step
-        instructiontext
+        instructiontext(markdown: false)
       }
       slug
     }
@@ -86,8 +86,6 @@ export async function getStaticProps() {
 export default function Home({ data, params }) {
     const router = useRouter();
     const recipe = router.query;
-    console.log(recipe)
-
     const reci = data.allRecipes.find(function (r) {
         if (r.slug === recipe.recipe) {
             return r;
