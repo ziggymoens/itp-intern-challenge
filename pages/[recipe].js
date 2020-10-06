@@ -73,7 +73,7 @@ export async function getStaticPaths() {
 export async function getStaticProps() {
     const data = await request({
         query: RECIPE_QUERY,
-        variables: { limit: 3 }
+        variables: { limit: 4 }
     })
 
     return {
@@ -83,7 +83,7 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home({ data, params }) {
+export default function Home({ data}) {
     const router = useRouter();
     const recipe = router.query;
     const reci = data.allRecipes.find(function (r) {
